@@ -1,0 +1,26 @@
+baseURL = "https://hankei6km.github.io/"
+languageCode = "ja-jp"
+title = "SSD: SHORT SLOW DISTANCE"
+theme = "ananke"
+
+DefaultContentLanguage = "ja"
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "monokai"
+    tabWidth = 4
+
+[params]
+  favicon = ""
+  description = ""
+  facebook = ""
+  twitter = "https://twitter.com/hankei6km"
+  instagram = ""
+  custom_css = ["css/custom.css", "css/syntax-monokai.css"]

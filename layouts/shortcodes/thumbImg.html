@@ -1,0 +1,23 @@
+{{- $src := .Get "src" -}}
+{{- $title := .Get "title" -}}
+{{- $width := .Get "w" -}}
+{{- $orgImage := .Page.Resources.GetMatch $src }}
+{{- $thumbPath := "" -}}
+{{- $imageLink := "" -}}
+
+{{- if $width -}}
+{{- $param := printf "%sx Lanczos" $width -}}
+{{- $thumb := $orgImage.Resize $param -}}
+{{- $thumbPath = $thumb.RelPermalink -}}
+{{- end -}}
+
+<figure>
+    {{- if $thumbPath -}}
+    <a href="{{- $orgImage.RelPermalink }}"><img src="{{- $thumbPath -}}"></a>
+    {{- else -}}
+    <img src="{{- $src -}}">
+    {{- end -}}
+    {{- if $title -}}
+    <figcaption>{{ $title }}</figcaption>
+    {{- end -}}
+</figure>

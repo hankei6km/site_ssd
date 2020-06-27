@@ -1,0 +1,11 @@
+{{- $src := .Get "src" -}}
+{{- $title := .Get "title" -}}
+{{- $width := .Get "w" -}}
+{{- $orgImage := .Page.Resources.GetMatch $src }}
+
+<figure>
+    <img src="{{- $orgImage.RelPermalink }}" style="width:{{- $width -}}">
+    {{- if $title -}}
+    <figcaption>{{ $title }}</figcaption>
+    {{- end -}}
+</figure>
